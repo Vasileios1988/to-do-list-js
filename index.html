@@ -8,15 +8,17 @@
 </head>
 <body>
     <h1>My To-do List</h1>
-    <div>
-        <input type="text" id="taskInput" placeholder="Enter your task">
+    <hr>
+    <div class="task-container">
+        <input type="text" id="task-input" placeholder="Enter your task">
         <br>
-        <button>Add Task</button>
+        <button onclick="addTask()" id="add-task-btn">Add Task</button>
     </div>
     
-    <div>
-        <ul id="taskList">
+    <div class="list-container">
+        <ul id="task-list">
         </ul>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
