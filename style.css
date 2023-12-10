@@ -42,14 +42,30 @@ hr {
     color: white;
 }
 
-#task-list {
+.list-container {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    color: black;
-    margin: 10px 0;
+  
+    margin-right: 25rem;
+    margin-left: 25rem;
     padding: 10px;
     border-radius: 5px;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#dlt-btn {
+    position: absolute;
+    justify-self: left;
+    background-color: #e07919;
+    border-style: none;
+    padding: 4px;
+    border-radius: 2em;
+}
+
+#tick-completed {
+    
 }
