@@ -1,71 +1,90 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #fca903;
-    text-align: center;
-    margin: 0;
-    padding:0;
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
-h1 {
-    color:#fc6f03;
-    font-size: 3rem;
-}
-
-hr {
-    border-top: 3px dotted #fc6f03;
-    border-bottom: 0;
-}
-
 .task-container {
-    background-color: #fc6f03;
-    padding: 2rem;
-    margin-right: 15rem;
-    margin-left: 15rem;
+    width:100%;
+    min-height:100vh;
+    background: linear-gradient(135deg, #34e5eb, #34b4eb, #348ceb,#0a57a8);
+    padding: 10px;
 }
 
+.to-do-task-add{
+    width:100%;
+    max-width: 540px;
+    background: #fff;
+    margin:100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
 
-#task-input {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: .5rem;
-    border: none;
-    border-radius: 2%;
+h2{
+    color: #0a57a8;
+    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dce0e5;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding-bottom: 5px 5px;
+    /*border: 1px solid black;*/
+}
+
+#task-input{
+    flex:1;
+    border:none;
+    outline:none;
+    background: transparent;
+    padding: 16px 50px;;
+    font-weight: 16px;
+    /* border: 1px solid red; */
+    border-radius: 40px;
 }
 
 #add-task-btn {
-    padding: 10px;
+    border:none;
+    outline:none;
+    padding: 16px 50px;
+    background:#34b4eb;
+    color:#fff;
     font-size: 16px;
     cursor: pointer;
-    border: none;
-    border-radius: 5%;
-    background-color: #fca903;
-    color: white;
+    border-radius: 40px;
+    /* border: 1px solid green; */
 }
 
-.list-container {
-    list-style-type: none;
-    padding: 0;
+ul li{
+list-style: none;
+font-size:17px;
+padding: 12px 8px 12px 50px;
+user-select: none;
+cursor: pointer;
+position: relative;
 }
 
-li {
-  
-    margin-right: 25rem;
-    margin-left: 25rem;
-    padding: 10px;
-    border-radius: 5px;
-    list-style-type: none;
-    justify-content: center;
-}
-
-#dlt-btn {
+ul li::before{
+    content: '';
     position: absolute;
-    justify-self: left;
-    background-color: #e07919;
-    border-style: none;
-    padding: 4px;
-    border-radius: 2em;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
 
-#tick-completed {
-    
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+.checked::before{
+    background-image: url(images/checked.png);
 }
